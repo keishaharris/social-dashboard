@@ -1,0 +1,244 @@
+/* color schemes 
+pink: #e5B0A4
+deep green: 1f3b2c
+moss 588068
+cream F5F3f5
+tan 9d8a76
+off-white #f9f9f9
+*/
+
+@font-face {
+  font-family: LogoTitle;
+  src: url("assets/MuseoSans_500.otf");
+}
+
+:root {
+  --title-color: #1f3b2c;
+  color: #1f3b2c;
+}
+
+body {
+  background: linear-gradient(to right, #7ac69a 19%, #edf2e9 0%);
+  font-family: LogoTitle;
+  font-size: 12px;
+}
+
+h1 {
+  font-family: LogoTitle;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px #c8c8c8;
+}
+
+h2, h4{
+  color:#1f3b2c;
+}
+
+h2{
+  letter-spacing: 1px;
+}
+
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #1f3b2c;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar main profile";
+  height: 85%;
+  margin: 50px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 7px #c8c8c8;
+}
+
+/* <------------------ Headbar Styling -----------------> */
+
+.header {
+  background-color: #f5f3f5;
+  grid-area: header;
+  border-bottom: 1px solid #c8c8c8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.left-header{
+line-height: 1;
+}
+
+.right-header {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.profile-logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+img[src*="magnify"] {
+  width: 20px;
+  background: #d7d7d6;
+  padding: 3px;
+  border-radius: 100vh;
+  margin: 3px;
+}
+
+.search-bar {
+  border-radius: 100vh;
+  background: #ebebea;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.search-bar.active {
+  width: 260px;
+}
+
+.search-bar > .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  z-index: 1000;
+  background: #d7d7d6;
+  border: none;
+  border-radius: 100vh;
+}
+
+.search-bar > .icon .active {
+  top: 0;
+  left: 0;
+}
+
+.search-bar > .input {
+  position: relative;
+  width: 200px;
+  height: 25px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar .input input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  background: #ebebea;
+}
+.headimage {
+  width: 20px;
+}
+
+.icon-bar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+/* <------------------ Sidebar Styling -----------------> */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f5f3f5;
+  display: grid;
+  grid-template-rows: 0.5fr 2fr 2fr;
+  gap: 2%;
+  padding: 20px 30px;
+  border-right: 1px solid #c8c8c8;
+}
+
+.logo {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+img[src*="lily"] {
+  width: 40px;
+}
+
+#nav > ul > li {
+  padding: 3px;
+  display: flex;
+  align-items: center;
+}
+
+#nav > ul > li > a:active,
+#nav > ul > li > a:link,
+#nav > ul > li > a:visited {
+  padding: 5px 5px 5px 2px;
+  transition: 1s;
+}
+
+#nav > ul > li > a:hover {
+  background: #e9ebe4;
+  text-decoration: none;
+  padding: 10px 65px 10px 5px;
+}
+
+.navimage {
+  width: 10%;
+}
+
+.support-bar {
+  margin-top: 35px;
+}
+
+
+/* <------------------ Main Content Styling -----------------> */
+
+.main {
+  background-color: #f5f3f5;
+  grid-area: main;
+}
+
+
+/* <------------------ Profile Sidebar Styling -----------------> */
+
+.profile {
+  background-color: #f5f3f5;
+  grid-area: profile;
+  display:flex;
+  justify-content: center;
+}
+.profile-stats{
+  margin-top: 100px;
+  width: 80%;
+  position: relative;
+  background-color: #fff;
+}
+
+#profile-picture{
+  border: 7px solid #fff;
+  border-radius: 100vh;
+  position:absolute;
+  top: -20%;
+  left: 10%;
+}
+
